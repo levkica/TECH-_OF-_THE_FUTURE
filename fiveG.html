@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #59809b;
+  font-family: "Nasalization Regular", sans-serif;
+}
+
+.logo {
+  color: #2e2e3a;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #2e2e3a;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #2e2e3a;
+  margin: 5px;
+  transition: all 00.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* ? so we won't se the side-nav-bar */
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #59809b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    transform: translateX(100%);
+    /* ? to remove the side-nav-bar from the screen*/
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+    /* ? we won't se the content of the nav */
+  }
+  .burger {
+    /* ? we will see only the three lines which will be click able to open the nav*/
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+.topic1{
+    color: black;
+    font-family: "Prototype", serif;
+    margin-top: 1.70%;
+    margin-left:  20px;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="other/style.css">
+    <title>Tech of the Future</title>
+    <style>
+         
+      body{
+        background: linear-gradient(to top right, #59809b 0%, #ff99cc 100%);
+      }
+
+    </style>
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h4>Tech of the Future</h4>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">AI</a>
+            </li>
+            <li>
+                <a href="#">Colonisation</a>
+            </li>
+            <li>
+                <a href="#">Tourism</a>
+            </li>
+            <li>
+                <a href="#">Transportation</a>
+            </li>
+            <li>
+                <a href="#">Communication</a>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <script src="other/main.js"></script>
+    <div> 
+        <h1 class="topic1"  style="padding-left: 47%;">5G Tech</h1>
+    </div>
+</body>
+</html>

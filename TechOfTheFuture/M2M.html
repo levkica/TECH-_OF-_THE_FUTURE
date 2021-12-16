@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #59809b;
+  font-family: "Nasalization Regular", sans-serif;
+}
+
+.logo {
+  color: #2e2e3a;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #2e2e3a;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #2e2e3a;
+  margin: 5px;
+  transition: all 00.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* ? so we won't se the side-nav-bar */
+    
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #59809b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    transform: translateX(100%);
+    /* ? to remove the side-nav-bar from the screen*/
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+    /* ? we won't se the content of the nav */
+  }
+  .burger {
+    /* ? we will see only the three lines which will be click able to open the nav*/
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+   
+.topic4 {
+  color: black;
+  margin-left: auto;
+}
+.content5{
+    font-family: "Prototype", serif;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #96bedb;
+    padding: 1.5em;
+    border-radius: 15px;
+    margin-top: 2%;
+    font-size: 20px;
+}
+.topiconpage1{
+  font-family: "Prototype", serif;
+    background-color: #507691 ; 
+    border:solid black;
+    margin-top: 20px;
+    font-size: 60px;
+    position: static;
+    padding: auto;
+   
+    
+}
+.contentonpage1{
+    font-family: "Prototype", serif;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    padding: 1.5em;
+    border-radius: 15px;
+    margin-top: 2%;
+}
+
+
+div .communication{
+  text-decoration: none;
+}
+div .fiveG{
+  text-decoration: none;
+
+}
+div .Smartphones{
+  text-decoration: none;
+
+}
+div .Meta{
+  text-decoration: none;
+
+}
+div .M2M{
+  text-decoration: none;
+  ;
+}
+.topic4{
+    font-family: "Prototype", serif;
+    background-color: #507691 ; 
+    border:solid black;
+    margin-top: 300px;
+    font-size: 60px;
+    position: static;
+}
+.contentonpage1n{
+  font-family: "Prototype", serif;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    padding: 1.5em;
+    border-radius: 15px;
+    margin-top: 2%;
+}
+body{
+        background: linear-gradient(to top right, #2e2e3a 100%);
+      }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="other/style.css">
+    <title>Tech of the Future</title>
+    <style>
+      
+
+    </style>
+</head>
+<body>
+    <nav style="z-index: 1;">
+        <div class="logo">
+            <h4>Tech of the Future</h4>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">AI</a>
+            </li>
+            <li>
+                <a href="#">Colonisation</a>
+            </li>
+            <li>
+                <a href="#">Tourism</a>
+            </li>
+            <li>
+                <a href="#">Transportation</a>
+            </li>
+            <li>
+                <a href="#">Communication</a>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <script src="other/main.js"></script>
+
+    
+        
+    <div>
+      
+        
+        <h1 class="topic4" style="padding-left: 47%;">M2M</a></h1>
+       
+        <p class="topiconpage1"><h2>The society of machines: M2M communication</h2></p>
+        <p class="contentonpage1">In this environment, the main goal of M2M communication is to establish and maintain unmediated (wireless) communication between devices without human intervention.
+           The idea is that devices need to be able to send and exchange information autonomously within the network. In this way, the data can be sent voluntarily at any time.The current state of M2M technology is a modest,
+           human-organized empowerment state. IoT devices typically send data to servers to perform limited network functions. The machine is connected, but  only  at the edge of the network. 
+           That is, there is interaction only  at the bottom physical layer that produces the data. Both the connections they make and the way they generate data are defined by humans.The  data stream that finally reaches the server is coordinated by the intermediate IoT device. This smart device aggregates  data before it reaches the cloud etc.</p>
+           <p class="contentonpage1n">
+            The  data stream that finally reaches the server is coordinated by the intermediate IoT device. This smart device aggregates  data before it reaches the cloud etc.Machine-to-machine, mobile-to-machine, and machine-to-mobile communications are all referred to as M2M. It's all about connecting the equipment and devices that we use every day.
+             M2M communications will link and empower a wide range of devices, from mainframes to everyday items
+            (e.g., household appliances, automobiles, and buildings), enabling new levels of smart services and commerce.
+            M2M has the ability to reshape whole industrial structures while also providing a windfall for technology enablers.
+            The term "machine-to-machine" (M2M) refers to the interactions that can occur between people and their goods.
+            A person can obtain information and data on a device's state, health, location, fluid or consumable levels, temperature, productivity, and maintenance history. Devices can also be linked together to exchange content such as music, warnings, and supply chain data, allowing for a smooth and automatic flow of data and services.
+            M2M communications may exist in almost any environment.</p>
+
+        
+        
+    </div>
+</body>
+</html>
